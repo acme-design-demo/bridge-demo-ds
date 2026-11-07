@@ -2,7 +2,7 @@
   "$schema": "https://unpkg.com/@bridge-ds/core@0.16.0/bridge.config.schema.json",
   "version": 1,
   "repo": {
-    "owner": "peterbono",
+    "owner": "acme-design-demo",
     "name": "bridge-demo-ds",
     "defaultBranch": "main"
   },
@@ -168,7 +168,13 @@
     {
       "key": "account",
       "name": "Account app",
-      "path": "apps/account",
+      "repo": "acme-design-demo/acme-account",
+      "design": {
+        "repo": "acme-design-demo/acme-account-design",
+        "preview": "https://{branch}.acme-account-design.pages.dev"
+      },
+      "preview": "https://{branch}.acme-account.pages.dev",
+      "production": "https://acme-account.pages.dev",
       "framework": "react"
     }
   ],
