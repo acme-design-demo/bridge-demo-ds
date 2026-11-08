@@ -1,0 +1,541 @@
+{
+  "version": 1,
+  "tool": "@bridge-ds/visual",
+  "createdAt": "2026-11-08T01:31:37.517Z",
+  "durationMs": 71774,
+  "base": {
+    "ref": "6af95eb9238042e91ec0208faa22289e9e695c80",
+    "sha": "6af95eb9238042e91ec0208faa22289e9e695c80"
+  },
+  "head": {
+    "ref": "9e19d292936ac473cf156397099f865ca5e3df96",
+    "sha": "9e19d292936ac473cf156397099f865ca5e3df96"
+  },
+  "options": {
+    "only": [
+      "stories",
+      "app"
+    ],
+    "threshold": 0.03,
+    "viewport": {
+      "stories": {
+        "width": 1024,
+        "height": 768
+      },
+      "app": {
+        "width": 1280,
+        "height": 800
+      }
+    }
+  },
+  "selection": {
+    "tokens": [
+      {
+        "path": "space.14",
+        "kind": "direct",
+        "modes": [
+          "brand=bridge,theme=light,density=comfortable",
+          "brand=bridge,theme=light,density=compact",
+          "brand=bridge,theme=dark,density=comfortable",
+          "brand=bridge,theme=dark,density=compact",
+          "brand=ocean,theme=light,density=comfortable",
+          "brand=ocean,theme=light,density=compact",
+          "brand=ocean,theme=dark,density=comfortable",
+          "brand=ocean,theme=dark,density=compact"
+        ]
+      }
+    ],
+    "vars": [
+      "--space-14"
+    ],
+    "files": [
+      ".changeset/bridge-add-a-56px-spacing-step-for-page-sections.md",
+      "packages/tokens/src/primitives/space.tokens.json"
+    ],
+    "components": [],
+    "stories": [
+      "foundations-tokens--color",
+      "foundations-tokens--typography",
+      "foundations-tokens--space-radius-elevation",
+      "internal-figma-reference--variant"
+    ],
+    "fallback": null,
+    "app": {
+      "include": true,
+      "reason": "1 token value changed"
+    }
+  },
+  "summary": {
+    "shots": 16,
+    "changed": 1,
+    "unchanged": 15,
+    "added": 0,
+    "removed": 0,
+    "errors": 0,
+    "maxPercent": 4.15
+  },
+  "shots": [
+    {
+      "key": "story__foundations-tokens--color__bridge-light",
+      "kind": "story",
+      "label": "Foundations/Tokens: Color",
+      "storyId": "foundations-tokens--color",
+      "brand": "bridge",
+      "theme": "light",
+      "status": "unchanged",
+      "changedPixels": 0,
+      "totalPixels": 1968128,
+      "percent": 0,
+      "boxes": [],
+      "size": {
+        "before": {
+          "width": 1024,
+          "height": 1922
+        },
+        "after": {
+          "width": 1024,
+          "height": 1922
+        }
+      },
+      "images": {}
+    },
+    {
+      "key": "story__foundations-tokens--typography__bridge-light",
+      "kind": "story",
+      "label": "Foundations/Tokens: Typography",
+      "storyId": "foundations-tokens--typography",
+      "brand": "bridge",
+      "theme": "light",
+      "status": "unchanged",
+      "changedPixels": 0,
+      "totalPixels": 815104,
+      "percent": 0,
+      "boxes": [],
+      "size": {
+        "before": {
+          "width": 1024,
+          "height": 796
+        },
+        "after": {
+          "width": 1024,
+          "height": 796
+        }
+      },
+      "images": {}
+    },
+    {
+      "key": "story__foundations-tokens--space-radius-elevation__bridge-light",
+      "kind": "story",
+      "label": "Foundations/Tokens: Space, radius, elevation",
+      "storyId": "foundations-tokens--space-radius-elevation",
+      "brand": "bridge",
+      "theme": "light",
+      "status": "unchanged",
+      "changedPixels": 0,
+      "totalPixels": 1018880,
+      "percent": 0,
+      "boxes": [],
+      "size": {
+        "before": {
+          "width": 1024,
+          "height": 995
+        },
+        "after": {
+          "width": 1024,
+          "height": 995
+        }
+      },
+      "images": {}
+    },
+    {
+      "key": "story__internal-figma-reference--variant__bridge-light",
+      "kind": "story",
+      "label": "Internal/Figma reference: Variant",
+      "storyId": "internal-figma-reference--variant",
+      "brand": "bridge",
+      "theme": "light",
+      "status": "unchanged",
+      "changedPixels": 0,
+      "totalPixels": 815104,
+      "percent": 0,
+      "boxes": [],
+      "size": {
+        "before": {
+          "width": 1024,
+          "height": 796
+        },
+        "after": {
+          "width": 1024,
+          "height": 796
+        }
+      },
+      "images": {}
+    },
+    {
+      "key": "story__foundations-tokens--color__bridge-dark",
+      "kind": "story",
+      "label": "Foundations/Tokens: Color",
+      "storyId": "foundations-tokens--color",
+      "brand": "bridge",
+      "theme": "dark",
+      "status": "unchanged",
+      "changedPixels": 0,
+      "totalPixels": 1968128,
+      "percent": 0,
+      "boxes": [],
+      "size": {
+        "before": {
+          "width": 1024,
+          "height": 1922
+        },
+        "after": {
+          "width": 1024,
+          "height": 1922
+        }
+      },
+      "images": {}
+    },
+    {
+      "key": "story__foundations-tokens--typography__bridge-dark",
+      "kind": "story",
+      "label": "Foundations/Tokens: Typography",
+      "storyId": "foundations-tokens--typography",
+      "brand": "bridge",
+      "theme": "dark",
+      "status": "unchanged",
+      "changedPixels": 0,
+      "totalPixels": 815104,
+      "percent": 0,
+      "boxes": [],
+      "size": {
+        "before": {
+          "width": 1024,
+          "height": 796
+        },
+        "after": {
+          "width": 1024,
+          "height": 796
+        }
+      },
+      "images": {}
+    },
+    {
+      "key": "story__foundations-tokens--space-radius-elevation__bridge-dark",
+      "kind": "story",
+      "label": "Foundations/Tokens: Space, radius, elevation",
+      "storyId": "foundations-tokens--space-radius-elevation",
+      "brand": "bridge",
+      "theme": "dark",
+      "status": "unchanged",
+      "changedPixels": 0,
+      "totalPixels": 1018880,
+      "percent": 0,
+      "boxes": [],
+      "size": {
+        "before": {
+          "width": 1024,
+          "height": 995
+        },
+        "after": {
+          "width": 1024,
+          "height": 995
+        }
+      },
+      "images": {}
+    },
+    {
+      "key": "story__internal-figma-reference--variant__bridge-dark",
+      "kind": "story",
+      "label": "Internal/Figma reference: Variant",
+      "storyId": "internal-figma-reference--variant",
+      "brand": "bridge",
+      "theme": "dark",
+      "status": "unchanged",
+      "changedPixels": 0,
+      "totalPixels": 815104,
+      "percent": 0,
+      "boxes": [],
+      "size": {
+        "before": {
+          "width": 1024,
+          "height": 796
+        },
+        "after": {
+          "width": 1024,
+          "height": 796
+        }
+      },
+      "images": {}
+    },
+    {
+      "key": "story__foundations-tokens--color__ocean-light",
+      "kind": "story",
+      "label": "Foundations/Tokens: Color",
+      "storyId": "foundations-tokens--color",
+      "brand": "ocean",
+      "theme": "light",
+      "status": "unchanged",
+      "changedPixels": 0,
+      "totalPixels": 1968128,
+      "percent": 0,
+      "boxes": [],
+      "size": {
+        "before": {
+          "width": 1024,
+          "height": 1922
+        },
+        "after": {
+          "width": 1024,
+          "height": 1922
+        }
+      },
+      "images": {}
+    },
+    {
+      "key": "story__foundations-tokens--typography__ocean-light",
+      "kind": "story",
+      "label": "Foundations/Tokens: Typography",
+      "storyId": "foundations-tokens--typography",
+      "brand": "ocean",
+      "theme": "light",
+      "status": "unchanged",
+      "changedPixels": 0,
+      "totalPixels": 815104,
+      "percent": 0,
+      "boxes": [],
+      "size": {
+        "before": {
+          "width": 1024,
+          "height": 796
+        },
+        "after": {
+          "width": 1024,
+          "height": 796
+        }
+      },
+      "images": {}
+    },
+    {
+      "key": "story__foundations-tokens--space-radius-elevation__ocean-light",
+      "kind": "story",
+      "label": "Foundations/Tokens: Space, radius, elevation",
+      "storyId": "foundations-tokens--space-radius-elevation",
+      "brand": "ocean",
+      "theme": "light",
+      "status": "unchanged",
+      "changedPixels": 0,
+      "totalPixels": 1018880,
+      "percent": 0,
+      "boxes": [],
+      "size": {
+        "before": {
+          "width": 1024,
+          "height": 995
+        },
+        "after": {
+          "width": 1024,
+          "height": 995
+        }
+      },
+      "images": {}
+    },
+    {
+      "key": "story__internal-figma-reference--variant__ocean-light",
+      "kind": "story",
+      "label": "Internal/Figma reference: Variant",
+      "storyId": "internal-figma-reference--variant",
+      "brand": "ocean",
+      "theme": "light",
+      "status": "unchanged",
+      "changedPixels": 0,
+      "totalPixels": 815104,
+      "percent": 0,
+      "boxes": [],
+      "size": {
+        "before": {
+          "width": 1024,
+          "height": 796
+        },
+        "after": {
+          "width": 1024,
+          "height": 796
+        }
+      },
+      "images": {}
+    },
+    {
+      "key": "story__foundations-tokens--color__ocean-dark",
+      "kind": "story",
+      "label": "Foundations/Tokens: Color",
+      "storyId": "foundations-tokens--color",
+      "brand": "ocean",
+      "theme": "dark",
+      "status": "changed",
+      "changedPixels": 81623,
+      "totalPixels": 1968128,
+      "percent": 4.15,
+      "boxes": [
+        {
+          "x": 32,
+          "y": 672,
+          "width": 240,
+          "height": 592
+        },
+        {
+          "x": 352,
+          "y": 672,
+          "width": 224,
+          "height": 432
+        },
+        {
+          "x": 672,
+          "y": 672,
+          "width": 144,
+          "height": 704
+        },
+        {
+          "x": 672,
+          "y": 752,
+          "width": 240,
+          "height": 352
+        },
+        {
+          "x": 352,
+          "y": 1136,
+          "width": 192,
+          "height": 128
+        },
+        {
+          "x": 672,
+          "y": 1136,
+          "width": 224,
+          "height": 128
+        },
+        {
+          "x": 32,
+          "y": 1296,
+          "width": 480,
+          "height": 80
+        },
+        {
+          "x": 32,
+          "y": 1408,
+          "width": 224,
+          "height": 514
+        },
+        {
+          "x": 352,
+          "y": 1440,
+          "width": 208,
+          "height": 336
+        },
+        {
+          "x": 672,
+          "y": 1440,
+          "width": 224,
+          "height": 336
+        },
+        {
+          "x": 352,
+          "y": 1808,
+          "width": 160,
+          "height": 114
+        },
+        {
+          "x": 672,
+          "y": 1808,
+          "width": 144,
+          "height": 96
+        }
+      ],
+      "size": {
+        "before": {
+          "width": 1024,
+          "height": 1922
+        },
+        "after": {
+          "width": 1024,
+          "height": 1922
+        }
+      },
+      "images": {
+        "before": "before/story__foundations-tokens--color__ocean-dark.png",
+        "after": "after/story__foundations-tokens--color__ocean-dark.png",
+        "diff": "diff/story__foundations-tokens--color__ocean-dark.png",
+        "composite": "composite/story__foundations-tokens--color__ocean-dark.png"
+      }
+    },
+    {
+      "key": "story__foundations-tokens--typography__ocean-dark",
+      "kind": "story",
+      "label": "Foundations/Tokens: Typography",
+      "storyId": "foundations-tokens--typography",
+      "brand": "ocean",
+      "theme": "dark",
+      "status": "unchanged",
+      "changedPixels": 0,
+      "totalPixels": 815104,
+      "percent": 0,
+      "boxes": [],
+      "size": {
+        "before": {
+          "width": 1024,
+          "height": 796
+        },
+        "after": {
+          "width": 1024,
+          "height": 796
+        }
+      },
+      "images": {}
+    },
+    {
+      "key": "story__foundations-tokens--space-radius-elevation__ocean-dark",
+      "kind": "story",
+      "label": "Foundations/Tokens: Space, radius, elevation",
+      "storyId": "foundations-tokens--space-radius-elevation",
+      "brand": "ocean",
+      "theme": "dark",
+      "status": "unchanged",
+      "changedPixels": 0,
+      "totalPixels": 1018880,
+      "percent": 0,
+      "boxes": [],
+      "size": {
+        "before": {
+          "width": 1024,
+          "height": 995
+        },
+        "after": {
+          "width": 1024,
+          "height": 995
+        }
+      },
+      "images": {}
+    },
+    {
+      "key": "story__internal-figma-reference--variant__ocean-dark",
+      "kind": "story",
+      "label": "Internal/Figma reference: Variant",
+      "storyId": "internal-figma-reference--variant",
+      "brand": "ocean",
+      "theme": "dark",
+      "status": "unchanged",
+      "changedPixels": 0,
+      "totalPixels": 815104,
+      "percent": 0,
+      "boxes": [],
+      "size": {
+        "before": {
+          "width": 1024,
+          "height": 796
+        },
+        "after": {
+          "width": 1024,
+          "height": 796
+        }
+      },
+      "images": {}
+    }
+  ]
+}
