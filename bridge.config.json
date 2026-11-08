@@ -179,6 +179,18 @@
       "framework": "react"
     },
     {
+      "key": "prints",
+      "name": "Acme Prints",
+      "repo": "acme-design-demo/acme-prints",
+      "design": {
+        "repo": "acme-design-demo/acme-prints-design",
+        "preview": "https://{branch}.acme-prints-design.pages.dev"
+      },
+      "preview": "https://{branch}.acme-prints.pages.dev",
+      "production": "https://acme-prints.pages.dev",
+      "framework": "react"
+    },
+    {
       "key": "crm",
       "name": "Acme CRM",
       "repo": "acme-design-demo/acme-crm",
