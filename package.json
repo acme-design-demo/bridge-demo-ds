@@ -4,11 +4,25 @@
   "description": "Demo design system for Bridge: sample team, sample changes.",
   "license": "MIT",
   "type": "module",
-  "workspaces": ["packages/*", "apps/*"],
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "scripts": {
     "check": "npx -y @bridge-ds/cli@^0.11.1 check --offline",
     "tokens:build": "npm -w @demo-ds/tokens run build",
     "typecheck": "npm -w @demo-ds/react run typecheck",
-    "seed": "node scripts/seed-demo.mjs"
+    "seed": "node scripts/seed-demo.mjs",
+    "build-storybook": "npm run tokens:build && storybook build -o storybook-static --quiet"
+  },
+  "devDependencies": {
+    "@storybook/react-vite": "10.3.6",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "storybook": "10.3.6",
+    "typescript": "5.9.3",
+    "vite": "7.3.7"
   }
 }
