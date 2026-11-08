@@ -177,6 +177,18 @@
       "preview": "https://{branch}.acme-account.pages.dev",
       "production": "https://acme-account.pages.dev",
       "framework": "react"
+    },
+    {
+      "key": "crm",
+      "name": "Acme CRM",
+      "repo": "acme-design-demo/acme-crm",
+      "design": {
+        "repo": "acme-design-demo/acme-crm-design",
+        "preview": "https://{branch}.acme-crm-design.pages.dev"
+      },
+      "preview": "https://{branch}.acme-crm-demo.pages.dev",
+      "production": "https://acme-crm-demo.pages.dev",
+      "framework": "react"
     }
   ],
   "demo": {
