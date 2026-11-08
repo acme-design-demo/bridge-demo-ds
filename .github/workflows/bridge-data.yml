@@ -67,16 +67,35 @@ jobs:
         with:
           node-version: 22
 
+      # The Account app lives in its own private repository (bridge.config.json products[].repo). Read it with a
+      # read-only deploy key of that repository (secret ACME_ACCOUNT_DEPLOY_KEY) and place it beside this one, so
+      # `bridge snapshot` names the product by its git origin and Studio says "Used in Account app". Without the key
+      # the audit falls back to the copy of the app kept in apps/account.
+      - name: Check out the Account app
+        id: account
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: acme-design-demo/acme-account
+          path: acme-account
+          ssh-key: ${{ secrets.ACME_ACCOUNT_DEPLOY_KEY }}
+
+      - name: Place the Account app beside the design system
+        id: place
+        if: steps.account.outcome == 'success'
+        run: mv acme-account ../acme-account
+
       - name: Snapshot
-        # Adoption audits (optional): add one --audit per app folder that uses the design system, in this
-        # repository, with an optional label: --audit "apps/web/src=Web app". Reports already written by
-        # `bridge audit --json` can be carried with --audit-report <file or folder>.
+        # Adoption audits (optional): add one --audit per app folder that uses the design system, with an optional
+        # label: --audit "apps/web/src=Web app". Reports already written by `bridge audit --json` can be carried with
+        # --audit-report <file or folder>.
         env:
           GITHUB_TOKEN: ${{ github.token }}
+          ACCOUNT_AUDIT: ${{ steps.place.outcome == 'success' && '../acme-account/src=Account app' || 'apps/account/src=Account app' }}
         # pipefail: a failed snapshot must stop the run, never publish an empty bridge-data branch.
         run: |
           set -o pipefail
-          npx --yes "$BRIDGE_CLI" snapshot --activity --out "$RUNNER_TEMP/bridge-data" --audit "apps/account/src=Account app" | tee -a "$GITHUB_STEP_SUMMARY"
+          npx --yes "$BRIDGE_CLI" snapshot --activity --out "$RUNNER_TEMP/bridge-data" --audit "$ACCOUNT_AUDIT" | tee -a "$GITHUB_STEP_SUMMARY"
 
       - name: Publish to the bridge-data branch
         env:
