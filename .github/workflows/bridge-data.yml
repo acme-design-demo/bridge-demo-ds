@@ -45,7 +45,7 @@ permissions:
 env:
   DATA_BRANCH: bridge-data
   # bridge snapshot --activity needs @bridge-ds/cli 0.12.0 or later.
-  BRIDGE_CLI: '@bridge-ds/cli@^0.18.0'
+  BRIDGE_CLI: '@bridge-ds/cli@^0.19.1'
 
 jobs:
   snapshot:
@@ -67,16 +67,52 @@ jobs:
         with:
           node-version: 22
 
+      # Acme Prints and Acme CRM live in their own private repositories (bridge.config.json products[].repo). Each is
+      # read with a read-only deploy key of that repository (secrets ACME_PRINTS_DEPLOY_KEY, ACME_CRM_DEPLOY_KEY) and
+      # placed beside this one, so `bridge snapshot` names the product by its git origin and Studio says "Used in".
+      # Without a key the snapshot goes on without that product's audit.
+      - name: Check out Acme Prints
+        id: prints
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: acme-design-demo/acme-prints
+          path: acme-prints
+          ssh-key: ${{ secrets.ACME_PRINTS_DEPLOY_KEY }}
+
+      - name: Check out Acme CRM
+        id: crm
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: acme-design-demo/acme-crm
+          path: acme-crm
+          ssh-key: ${{ secrets.ACME_CRM_DEPLOY_KEY }}
+
+      - name: Place the products beside the design system
+        id: place
+        run: |
+          prints=''; crm=''
+          if [ "${{ steps.prints.outcome }}" = success ] && [ -d acme-prints/src ]; then mv acme-prints ../acme-prints; prints='../acme-prints/src=Acme Prints'; fi
+          if [ "${{ steps.crm.outcome }}" = success ] && [ -d acme-crm/src ]; then mv acme-crm ../acme-crm; crm='../acme-crm/src=Acme CRM'; fi
+          echo "prints=$prints" >> "$GITHUB_OUTPUT"
+          echo "crm=$crm" >> "$GITHUB_OUTPUT"
+
       - name: Snapshot
-        # Adoption audits (optional): add one --audit per app folder that uses the design system, in this
-        # repository, with an optional label: --audit "apps/web/src=Web app". Reports already written by
-        # `bridge audit --json` can be carried with --audit-report <file or folder>.
+        # Adoption audits (optional): add one --audit per app folder that uses the design system, with an optional
+        # label: --audit "apps/web/src=Web app". Reports already written by `bridge audit --json` can be carried with
+        # --audit-report <file or folder>.
         env:
           GITHUB_TOKEN: ${{ github.token }}
+          PRINTS_AUDIT: ${{ steps.place.outputs.prints }}
+          CRM_AUDIT: ${{ steps.place.outputs.crm }}
         # pipefail: a failed snapshot must stop the run, never publish an empty bridge-data branch.
         run: |
           set -o pipefail
-          npx --yes "$BRIDGE_CLI" snapshot --activity --out "$RUNNER_TEMP/bridge-data" --audit "apps/account/src=Account app" | tee -a "$GITHUB_STEP_SUMMARY"
+          npx --yes "$BRIDGE_CLI" snapshot --activity --out "$RUNNER_TEMP/bridge-data" \
+            ${PRINTS_AUDIT:+--audit "$PRINTS_AUDIT"} \
+            ${CRM_AUDIT:+--audit "$CRM_AUDIT"} \
+            | tee -a "$GITHUB_STEP_SUMMARY"
 
       - name: Publish to the bridge-data branch
         env:
