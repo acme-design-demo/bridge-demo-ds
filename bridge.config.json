@@ -167,18 +167,6 @@
       "default": true
     },
     {
-      "key": "account",
-      "name": "Account app",
-      "repo": "acme-design-demo/acme-account",
-      "design": {
-        "repo": "acme-design-demo/acme-account-design",
-        "preview": "https://{branch}.acme-account-design.pages.dev"
-      },
-      "preview": "https://{branch}.acme-account.pages.dev",
-      "production": "https://acme-account.pages.dev",
-      "framework": "react"
-    },
-    {
       "key": "prints",
       "name": "Acme Prints",
       "repo": "acme-design-demo/acme-prints",
