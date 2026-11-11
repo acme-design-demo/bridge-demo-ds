@@ -1,0 +1,51 @@
+{
+  "product": "crm",
+  "base": "https://acme-crm-demo.pages.dev",
+  "ref": "fe5501ee5abcf5d23e76e4edc7c082966dc2eed0",
+  "at": "2026-11-11T12:18:18.963Z",
+  "screens": {
+    "/#/contacts": {
+      "image": "audits/acme-crm/contacts.webp",
+      "url": "https://acme-crm-demo.pages.dev/#/contacts",
+      "capturedAt": "2026-11-11T12:18:18.963Z",
+      "width": 800,
+      "height": 500
+    },
+    "/#/settings": {
+      "image": "audits/acme-crm/settings.webp",
+      "url": "https://acme-crm-demo.pages.dev/#/settings",
+      "capturedAt": "2026-11-11T12:18:18.963Z",
+      "width": 800,
+      "height": 500
+    },
+    "/#/": {
+      "image": "audits/acme-crm/home.webp",
+      "url": "https://acme-crm-demo.pages.dev/#/",
+      "capturedAt": "2026-11-11T12:18:18.963Z",
+      "width": 800,
+      "height": 500
+    },
+    "/#/deals": {
+      "image": "audits/acme-crm/deals.webp",
+      "url": "https://acme-crm-demo.pages.dev/#/deals",
+      "capturedAt": "2026-11-11T12:18:18.963Z",
+      "width": 800,
+      "height": 500
+    },
+    "/#/companies": {
+      "image": "audits/acme-crm/companies.webp",
+      "url": "https://acme-crm-demo.pages.dev/#/companies",
+      "capturedAt": "2026-11-11T12:18:18.963Z",
+      "width": 800,
+      "height": 500
+    },
+    "/#/tasks": {
+      "image": "audits/acme-crm/tasks.webp",
+      "url": "https://acme-crm-demo.pages.dev/#/tasks",
+      "capturedAt": "2026-11-11T12:18:18.963Z",
+      "width": 800,
+      "height": 500
+    }
+  },
+  "failed": []
+}
