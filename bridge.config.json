@@ -188,7 +188,18 @@
       },
       "preview": "https://{branch}.acme-crm-demo.pages.dev",
       "production": "https://acme-crm-demo.pages.dev",
-      "framework": "react"
+      "framework": "react",
+      "screens": {
+        "/#/": [
+          "components/atomic-crm/dashboard/**",
+          "components/atomic-crm/layout/**"
+        ],
+        "/#/contacts": "components/atomic-crm/contacts/**",
+        "/#/companies": "components/atomic-crm/companies/**",
+        "/#/deals": "components/atomic-crm/deals/**",
+        "/#/tasks": "components/atomic-crm/tasks/**",
+        "/#/settings": "components/atomic-crm/settings/**"
+      }
     }
   ],
   "demo": {
