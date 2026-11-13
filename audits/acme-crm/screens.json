@@ -2,47 +2,47 @@
   "product": "crm",
   "base": "https://acme-crm-demo.pages.dev",
   "ref": "fe5501ee5abcf5d23e76e4edc7c082966dc2eed0",
-  "at": "2026-11-12T20:18:08.006Z",
+  "at": "2026-11-13T22:30:28.326Z",
   "screens": {
     "/#/contacts": {
       "image": "audits/acme-crm/contacts.webp",
       "url": "https://acme-crm-demo.pages.dev/#/contacts",
-      "capturedAt": "2026-11-12T20:18:08.006Z",
+      "capturedAt": "2026-11-13T22:30:28.326Z",
       "width": 800,
       "height": 500
     },
     "/#/settings": {
       "image": "audits/acme-crm/settings.webp",
       "url": "https://acme-crm-demo.pages.dev/#/settings",
-      "capturedAt": "2026-11-12T20:18:08.006Z",
+      "capturedAt": "2026-11-13T22:30:28.326Z",
       "width": 800,
       "height": 500
     },
     "/#/": {
       "image": "audits/acme-crm/home.webp",
       "url": "https://acme-crm-demo.pages.dev/#/",
-      "capturedAt": "2026-11-12T20:18:08.006Z",
+      "capturedAt": "2026-11-13T22:30:28.326Z",
       "width": 800,
       "height": 500
     },
     "/#/deals": {
       "image": "audits/acme-crm/deals.webp",
       "url": "https://acme-crm-demo.pages.dev/#/deals",
-      "capturedAt": "2026-11-12T20:18:08.006Z",
+      "capturedAt": "2026-11-13T22:30:28.326Z",
       "width": 800,
       "height": 500
     },
     "/#/companies": {
       "image": "audits/acme-crm/companies.webp",
       "url": "https://acme-crm-demo.pages.dev/#/companies",
-      "capturedAt": "2026-11-12T20:18:08.006Z",
+      "capturedAt": "2026-11-13T22:30:28.326Z",
       "width": 800,
       "height": 500
     },
     "/#/tasks": {
       "image": "audits/acme-crm/tasks.webp",
       "url": "https://acme-crm-demo.pages.dev/#/tasks",
-      "capturedAt": "2026-11-12T20:18:08.006Z",
+      "capturedAt": "2026-11-13T22:30:28.326Z",
       "width": 800,
       "height": 500
     }
@@ -53,7 +53,7 @@
       "image": "audits/acme-crm/piece-button.webp",
       "from": "/#/contacts",
       "url": "https://acme-crm-demo.pages.dev/#/contacts",
-      "capturedAt": "2026-11-12T20:18:08.006Z",
+      "capturedAt": "2026-11-13T22:30:28.326Z",
       "width": 256,
       "height": 68
     },
@@ -61,7 +61,7 @@
       "image": "audits/acme-crm/piece-dialog.webp",
       "from": "/#/contacts",
       "url": "https://acme-crm-demo.pages.dev/#/contacts",
-      "capturedAt": "2026-11-12T20:18:08.006Z",
+      "capturedAt": "2026-11-13T22:30:28.326Z",
       "width": 636,
       "height": 416
     },
@@ -69,7 +69,7 @@
       "image": "audits/acme-crm/piece-menu.webp",
       "from": "/#/contacts",
       "url": "https://acme-crm-demo.pages.dev/#/contacts",
-      "capturedAt": "2026-11-12T20:18:08.006Z",
+      "capturedAt": "2026-11-13T22:30:28.326Z",
       "width": 288,
       "height": 142
     },
@@ -77,7 +77,7 @@
       "image": "audits/acme-crm/piece-link.webp",
       "from": "/#/companies",
       "url": "https://acme-crm-demo.pages.dev/#/companies",
-      "capturedAt": "2026-11-12T20:18:08.006Z",
+      "capturedAt": "2026-11-13T22:30:28.326Z",
       "width": 193,
       "height": 54
     },
@@ -85,7 +85,7 @@
       "image": "audits/acme-crm/piece-select.webp",
       "from": "/#/settings",
       "url": "https://acme-crm-demo.pages.dev/#/settings",
-      "capturedAt": "2026-11-12T20:18:08.006Z",
+      "capturedAt": "2026-11-13T22:30:28.326Z",
       "width": 586,
       "height": 68
     },
@@ -93,7 +93,7 @@
       "image": "audits/acme-crm/piece-tooltip.webp",
       "from": "/#/settings",
       "url": "https://acme-crm-demo.pages.dev/#/settings",
-      "capturedAt": "2026-11-12T20:18:08.006Z",
+      "capturedAt": "2026-11-13T22:30:28.326Z",
       "width": 108,
       "height": 73
     },
@@ -101,7 +101,7 @@
       "image": "audits/acme-crm/piece-card.webp",
       "from": "/#/settings",
       "url": "https://acme-crm-demo.pages.dev/#/settings",
-      "capturedAt": "2026-11-12T20:18:08.006Z",
+      "capturedAt": "2026-11-13T22:30:28.326Z",
       "width": 620,
       "height": 343
     },
@@ -109,7 +109,7 @@
       "image": "audits/acme-crm/piece-pagination.webp",
       "from": "/#/contacts",
       "url": "https://acme-crm-demo.pages.dev/#/contacts",
-      "capturedAt": "2026-11-12T20:18:08.006Z",
+      "capturedAt": "2026-11-13T22:30:28.326Z",
       "width": 382,
       "height": 68
     },
@@ -117,7 +117,7 @@
       "image": "audits/acme-crm/piece-input.webp",
       "from": "/#/settings",
       "url": "https://acme-crm-demo.pages.dev/#/settings",
-      "capturedAt": "2026-11-12T20:18:08.006Z",
+      "capturedAt": "2026-11-13T22:30:28.326Z",
       "width": 517,
       "height": 168
     }
