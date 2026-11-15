@@ -96,7 +96,7 @@
     "index": "packages/react/src/index.ts"
   },
   "storybook": {
-    "url": "https://bridge-storybook.floriangouloubi.com"
+    "url": "https://acme-design-demo.github.io/bridge-demo-ds/main/"
   },
   "docs": {
     "designLanguage": "docs/DESIGN-LANGUAGE.md",
@@ -205,5 +205,13 @@
   "demo": {
     "viewer": "Dana",
     "role": "DS lead"
+  },
+  "previews": {
+    "apps": {
+      "storybook": "https://acme-design-demo.github.io/bridge-demo-ds/{branch}/"
+    },
+    "production": {
+      "storybook": "https://acme-design-demo.github.io/bridge-demo-ds/main/"
+    }
   }
 }
