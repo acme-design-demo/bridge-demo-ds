@@ -1,0 +1,1 @@
+import{r as a,n}from"./iframe-RdPw3ozT.js";const d=a.forwardRef(function(e,r){const{className:i,render:l,orientation:t="horizontal",style:p,...o}=e;return n("div",e,{state:{orientation:t},ref:r,props:[{role:"separator","aria-orientation":t},o]})});export{d as S};
