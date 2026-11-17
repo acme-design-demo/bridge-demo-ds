@@ -1,1 +1,0 @@
-._grid_1q4w6_1{display:grid;gap:var(--_gap, var(--layout-gap));min-width:0;margin:0;padding:0;list-style:none}._fixed_1q4w6_10{grid-template-columns:repeat(var(--_columns, 1),minmax(0,1fr))}._auto_1q4w6_15{grid-template-columns:repeat(auto-fit,minmax(min(var(--_min),100%),1fr))}
