@@ -131,7 +131,7 @@
         "peterbono"
       ],
       "tech": [
-        "peterbono"
+        "acme-malik"
       ]
     },
     "rights": {
@@ -142,10 +142,10 @@
         "tech"
       ],
       "ship": [
-        "tech"
+        "design"
       ]
     },
-    "soloOwnerCanApproveBoth": true,
+    "soloOwnerCanApproveBoth": false,
     "override": {
       "allowed": [
         "peterbono"
