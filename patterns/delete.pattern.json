@@ -1,0 +1,118 @@
+{
+  "id": "delete",
+  "kind": "action",
+  "name": "Delete",
+  "purpose": "Removes a record from the product. Whether it can come back decides the flow: Undo when it can be undone, a question first when it cannot.",
+  "reversible": false,
+  "rules": [
+    "Undo when it can be undone, confirm only when it cannot.",
+    "When it can be undone (CRM: companies, contacts, deals, tasks, notes, tags), the click deletes at once, with no question, and a toast says it is gone with an Undo button.",
+    "When it cannot be undone (Prints: customers, products, categories), the first button only asks: an AlertDialog names what goes and says it cannot be undone, with a confirm button that repeats the verb and the object, like Delete customer, and Cancel beside it.",
+    "After a delete that cannot be undone, a success toast says it is deleted, with no Undo."
+  ],
+  "components": [
+    "Button",
+    "AlertDialog",
+    "Toast"
+  ],
+  "usedIn": [
+    {
+      "screen": "CRM, a company, side panel",
+      "label": "Delete",
+      "product": "crm",
+      "file": "src/components/atomic-crm/companies/CompanyAside.tsx",
+      "match": "<DeleteButton variant=\"ghost\" size=\"sm\" />"
+    },
+    {
+      "screen": "CRM, a contact, side panel",
+      "label": "Delete",
+      "product": "crm",
+      "file": "src/components/atomic-crm/contacts/ContactAside.tsx",
+      "match": "<DeleteButton variant=\"ghost\" size=\"sm\" />"
+    },
+    {
+      "screen": "CRM, an archived deal",
+      "label": "Delete",
+      "product": "crm",
+      "file": "src/components/atomic-crm/deals/DealShow.tsx",
+      "match": "<DeleteButton />"
+    },
+    {
+      "screen": "CRM, editing a deal",
+      "label": "Delete",
+      "product": "crm",
+      "file": "src/components/atomic-crm/deals/DealEdit.tsx",
+      "match": "<DeleteButton />"
+    },
+    {
+      "screen": "CRM, editing a task",
+      "label": "Delete",
+      "product": "crm",
+      "file": "src/components/atomic-crm/tasks/TaskEdit.tsx",
+      "match": "notify(\"resources.tasks.deleted\""
+    },
+    {
+      "screen": "CRM, a task, More actions",
+      "label": "Delete",
+      "product": "crm",
+      "file": "src/components/atomic-crm/tasks/Task.tsx",
+      "match": "useDeleteWithUndoController"
+    },
+    {
+      "screen": "CRM, a note",
+      "label": "Delete note",
+      "product": "crm",
+      "file": "src/components/atomic-crm/notes/Note.tsx",
+      "match": "resources.notes.action.delete"
+    },
+    {
+      "screen": "CRM, editing a contact on a phone, More actions",
+      "label": "Delete",
+      "product": "crm",
+      "file": "src/components/atomic-crm/contacts/ContactEditSheet.tsx",
+      "match": "mutationMode: \"undoable\""
+    },
+    {
+      "screen": "CRM, editing a note on a phone, More actions",
+      "label": "Delete",
+      "product": "crm",
+      "file": "src/components/atomic-crm/notes/NoteEditSheet.tsx",
+      "match": "mutationMode: \"undoable\""
+    },
+    {
+      "screen": "CRM, Settings, Tags",
+      "label": "Delete",
+      "product": "crm",
+      "file": "src/components/atomic-crm/settings/SettingsTags.tsx",
+      "match": "<DeleteButton resource=\"tags\" redirect={false} size=\"sm\" />"
+    },
+    {
+      "screen": "CRM, Contacts, selected rows",
+      "label": "Delete",
+      "product": "crm",
+      "file": "src/components/atomic-crm/contacts/ContactList.tsx",
+      "match": "<BulkDeleteButton"
+    },
+    {
+      "screen": "Prints, editing a customer",
+      "label": "Delete",
+      "product": "prints",
+      "file": "src/resources/customers/CustomerEdit.tsx",
+      "match": "<EditPage<Customer>"
+    },
+    {
+      "screen": "Prints, editing a product",
+      "label": "Delete",
+      "product": "prints",
+      "file": "src/resources/products/ProductEdit.tsx",
+      "match": "<EditPage<Product>"
+    },
+    {
+      "screen": "Prints, editing a category",
+      "label": "Delete",
+      "product": "prints",
+      "file": "src/resources/categories/Categories.tsx",
+      "match": "<FormToolbar sticky={false} />"
+    }
+  ]
+}
