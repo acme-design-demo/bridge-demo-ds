@@ -1,0 +1,1 @@
+import{j as n,e as i}from"./iframe-C39eZITx.js";const d="_hidden_vie0p_1",o={hidden:d};function t({className:e,...s}){return n.jsx("span",{className:i(o.hidden,e),...s})}t.__docgenInfo={description:"Text for assistive technology only: read by screen readers, invisible on screen.",methods:[],displayName:"VisuallyHidden"};export{t as V};
