@@ -1,0 +1,59 @@
+# Storybook for every branch, on GitHub Pages: https://acme-design-demo.github.io/bridge-demo-ds/<branch>/
+# (branch named as Bridge names it: lowercase, every run of other characters one dash). Bridge reads it through
+# bridge.config.json `previews`, to play a behavior on today's library and on a branch side by side.
+# No secret: it publishes with the workflow's own token to the gh-pages branch.
+name: Storybook previews
+
+on:
+  push:
+    branches: ['**']
+    paths-ignore: ['**.md']
+  delete:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: storybook-pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.event_name == 'push' && github.ref_name != 'gh-pages'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build-storybook
+      - name: Folder of this branch
+        id: slug
+        run: echo "dir=$(echo "$GITHUB_REF_NAME" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g; s/^-+|-+$//g')" >> "$GITHUB_OUTPUT"
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: storybook-static
+          destination_dir: ${{ steps.slug.outputs.dir }}
+          keep_files: true
+          commit_message: "Storybook for ${{ github.ref_name }}"
+
+  remove:
+    if: github.event_name == 'delete' && github.event.ref_type == 'branch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+      - name: Remove the deleted branch's Storybook
+        env:
+          REF: ${{ github.event.ref }}
+        run: |
+          dir=$(echo "$REF" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g; s/^-+|-+$//g')
+          [ -n "$dir" ] && [ "$dir" != "main" ] && [ -d "$dir" ] || exit 0
+          git rm -rq "$dir"
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "Remove the Storybook of $REF"
+          git push

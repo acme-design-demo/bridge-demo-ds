@@ -1,0 +1,59 @@
+{
+  "id": "export",
+  "kind": "action",
+  "name": "Export",
+  "purpose": "Downloads the records a person sees, or picks, as a file.",
+  "reversible": true,
+  "rules": [
+    "It changes nothing in the product, so it never asks and has no Undo: the file downloads on the click.",
+    "The button carries the download icon.",
+    "No toast when it works; only a failure says so."
+  ],
+  "components": [
+    "Button"
+  ],
+  "usedIn": [
+    {
+      "screen": "CRM, Companies",
+      "label": "Export",
+      "product": "crm",
+      "file": "src/components/atomic-crm/companies/CompanyList.tsx",
+      "match": "<ExportButton />"
+    },
+    {
+      "screen": "CRM, Contacts",
+      "label": "Export",
+      "product": "crm",
+      "file": "src/components/atomic-crm/contacts/ContactList.tsx",
+      "match": "<ExportButton exporter={exporter} />"
+    },
+    {
+      "screen": "CRM, Deals",
+      "label": "Export",
+      "product": "crm",
+      "file": "src/components/atomic-crm/deals/DealList.tsx",
+      "match": "<ExportButton />"
+    },
+    {
+      "screen": "CRM, Sales",
+      "label": "Export",
+      "product": "crm",
+      "file": "src/components/atomic-crm/sales/SalesList.tsx",
+      "match": "<ExportButton />"
+    },
+    {
+      "screen": "CRM, Contacts, selected rows",
+      "label": "Export",
+      "product": "crm",
+      "file": "src/components/atomic-crm/contacts/ContactList.tsx",
+      "match": "<BulkExportButton />"
+    },
+    {
+      "screen": "CRM, a contact",
+      "label": "Export to vCard",
+      "product": "crm",
+      "file": "src/components/atomic-crm/contacts/ExportVCardButton.tsx",
+      "match": "resources.contacts.action.export_vcard"
+    }
+  ]
+}

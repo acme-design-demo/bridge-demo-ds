@@ -1,0 +1,45 @@
+{
+  "id": "import",
+  "kind": "action",
+  "name": "Import",
+  "purpose": "Adds many records at once from a CSV file.",
+  "reversible": false,
+  "rules": [
+    "Import CSV only opens the import dialog: the person picks what to import and the file, can download a CSV sample, and nothing is imported before Start import.",
+    "While it runs, a progress toast counts the records and the errors, with Stop import, and Import CSV stays off.",
+    "When it ends, a toast says how many records came in and how many errors there were. There is no Undo."
+  ],
+  "components": [
+    "Button"
+  ],
+  "usedIn": [
+    {
+      "screen": "CRM, Contacts",
+      "label": "Import CSV",
+      "product": "crm",
+      "file": "src/components/atomic-crm/contacts/ContactList.tsx",
+      "match": "<DataImportButton resource=\"contacts\" />"
+    },
+    {
+      "screen": "CRM, Contacts, empty",
+      "label": "Import CSV",
+      "product": "crm",
+      "file": "src/components/atomic-crm/contacts/ContactEmpty.tsx",
+      "match": "<DataImportButton resource=\"contacts\" />"
+    },
+    {
+      "screen": "CRM, Deals",
+      "label": "Import CSV",
+      "product": "crm",
+      "file": "src/components/atomic-crm/deals/DealList.tsx",
+      "match": "<DataImportButton resource=\"deals\" />"
+    },
+    {
+      "screen": "CRM, Deals, empty",
+      "label": "Import CSV",
+      "product": "crm",
+      "file": "src/components/atomic-crm/deals/DealEmpty.tsx",
+      "match": "<DataImportButton resource=\"deals\" />"
+    }
+  ]
+}
