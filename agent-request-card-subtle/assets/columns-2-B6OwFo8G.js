@@ -1,0 +1,1 @@
+import{d as o}from"./iframe-DXKUr0Oy.js";const e={name:"columns-2",size:24,node:[["rect",{width:"18",height:"18",x:"3",y:"3",rx:"2",key:"afitv7"}],["path",{d:"M12 3v18",key:"108xh3"}]],aliases:["columns"]};e.node;const a=o(e);export{a as C};

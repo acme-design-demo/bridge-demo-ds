@@ -1,0 +1,1 @@
+import{r as a,l as e,an as h}from"./iframe-DXKUr0Oy.js";import{b as n}from"./useOpenInteractionType-836zuFso.js";const p=20;function L(c,t,o,l){const[f,s]=a.useState(!1);e(()=>{if(!c||!t||o==null){s(!1);return}const u=h(o).documentElement.clientWidth,r=o.offsetWidth;s(u>0&&r>0&&r>=u-p)},[c,t,o]),n(c&&(!t||f),l)}export{L as u};
